@@ -39,6 +39,7 @@ public class MaterialPreferenceCheckBoxItem extends MaterialPreferenceItem{
     private boolean showIcon = true;
     private int iconGravity = GRAVITY_MIDDLE;
     private MaterialPreferenceOnCheckedChangedListener onCheckedChanged = null;
+    private boolean checked =false;
 
     private MaterialPreferenceCheckBoxItem(MaterialPreferenceCheckBoxItem.Builder builder) {
         super();
@@ -56,33 +57,25 @@ public class MaterialPreferenceCheckBoxItem extends MaterialPreferenceItem{
         this.iconGravity = builder.iconGravity;
 
         this.onCheckedChanged = builder.onCheckedChanged;
+        this.checked = builder.checked;
     }
 
-    public MaterialPreferenceCheckBoxItem(CharSequence text, CharSequence subText, Drawable icon, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
+    public MaterialPreferenceCheckBoxItem(CharSequence text, CharSequence subText, Drawable icon, boolean checked, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
         this.text = text;
         this.subText = subText;
         this.icon = icon;
         this.onCheckedChanged = onCheckedChanged;
+        this.checked=checked;
     }
 
-    public MaterialPreferenceCheckBoxItem(CharSequence text, CharSequence subText, Drawable icon) {
-        this.text = text;
-        this.subText = subText;
-        this.icon = icon;
-    }
-
-    public MaterialPreferenceCheckBoxItem(int textRes, int subTextRes, int iconRes, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
+    public MaterialPreferenceCheckBoxItem(int textRes, int subTextRes, int iconRes, boolean checked, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
         this.textRes = textRes;
         this.subTextRes = subTextRes;
         this.iconRes = iconRes;
         this.onCheckedChanged = onCheckedChanged;
+        this.checked=checked;
     }
 
-    public MaterialPreferenceCheckBoxItem(int textRes, int subTextRes, int iconRes) {
-        this.textRes = textRes;
-        this.subTextRes = subTextRes;
-        this.iconRes = iconRes;
-    }
 
     public static MaterialPreferenceItemViewHolder getViewHolder(View view) {
         return new MaterialPreferenceCheckBoxItemViewHolder(view);
@@ -146,6 +139,8 @@ public class MaterialPreferenceCheckBoxItem extends MaterialPreferenceItem{
         if (Build.VERSION.SDK_INT < 21) {
             holder.view.setPadding(pL, pT, pR, pB);
         }
+
+        holder.aCheckBox.setChecked(item.isChecked());
     }
 
     @Override
@@ -179,6 +174,7 @@ public class MaterialPreferenceCheckBoxItem extends MaterialPreferenceItem{
         this.showIcon = item.showIcon;
         this.iconGravity = item.iconGravity;
         this.onCheckedChanged = item.onCheckedChanged;
+        this.checked = item.checked;
     }
 
     @Override
@@ -269,6 +265,14 @@ public class MaterialPreferenceCheckBoxItem extends MaterialPreferenceItem{
         return onCheckedChanged;
     }
 
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
     public MaterialPreferenceCheckBoxItem setOnCheckedChanged(MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
         this.onCheckedChanged = onCheckedChanged;
         return this;
@@ -324,6 +328,7 @@ public class MaterialPreferenceCheckBoxItem extends MaterialPreferenceItem{
         private boolean showIcon = true;
         @IconGravity
         private int iconGravity = GRAVITY_MIDDLE;
+        boolean checked = false;
 
         public Builder text(CharSequence text) {
             this.text = text;
@@ -384,6 +389,11 @@ public class MaterialPreferenceCheckBoxItem extends MaterialPreferenceItem{
 
         public Builder setOnCheckedChanged(MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
             this.onCheckedChanged = onCheckedChanged;
+            return this;
+        }
+
+        public Builder setChecked(boolean checked){
+            this.checked=checked;
             return this;
         }
 

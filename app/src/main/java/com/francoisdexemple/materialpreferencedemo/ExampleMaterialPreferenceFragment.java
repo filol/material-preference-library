@@ -41,7 +41,7 @@ public class ExampleMaterialPreferenceFragment extends MaterialPreferenceFragmen
     protected MaterialPreferenceList getMaterialPreferenceList(final Context c) {
         MaterialPreferenceList list = Demo.createMaterialPreferenceList(c, R.color.mp_color_icon_dark_theme, THEME_LIGHT_DARKBAR);
 
-        list.getCards().get(4).getItems().add(createDynamicItem("Tap for a random number", c));
+        list.getCards().get(2).getItems().add(createDynamicItem("Tap for a random number", c));
 
         final MaterialPreferenceActionItem time = new MaterialPreferenceActionItem.Builder()
                 .text("Unix Time In Millis")
@@ -51,7 +51,7 @@ public class ExampleMaterialPreferenceFragment extends MaterialPreferenceFragmen
                         .color(ContextCompat.getColor(c, R.color.mp_color_icon_dark_theme)
                         ).sizeDp(18))
                 .build();
-        list.getCards().get(4).getItems().add(time);
+        list.getCards().get(2).getItems().add(time);
 
         return list;
     }
@@ -62,7 +62,7 @@ public class ExampleMaterialPreferenceFragment extends MaterialPreferenceFragmen
         public void run() {
             Log.i("MaterialPrefFragment", "Updating with time");
             if (getList().getCards().size() > 0) {
-                ((MaterialPreferenceActionItem) getList().getCards().get(4).getItems().get(7)).setSubText("" + System.currentTimeMillis());
+                ((MaterialPreferenceActionItem) getList().getCards().get(2).getItems().get(7)).setSubText("" + System.currentTimeMillis());
                 refreshMaterialPreferenceList();
             }
             handler.postDelayed(this, 1000);

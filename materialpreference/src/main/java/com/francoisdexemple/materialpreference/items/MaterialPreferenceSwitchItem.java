@@ -39,6 +39,7 @@ public class MaterialPreferenceSwitchItem extends MaterialPreferenceItem {
     private boolean showIcon = true;
     private int iconGravity = GRAVITY_MIDDLE;
     private MaterialPreferenceOnCheckedChangedListener onCheckedChanged = null;
+    private boolean checked = false;
 
     private MaterialPreferenceSwitchItem(MaterialPreferenceSwitchItem.Builder builder) {
         super();
@@ -56,32 +57,23 @@ public class MaterialPreferenceSwitchItem extends MaterialPreferenceItem {
         this.iconGravity = builder.iconGravity;
 
         this.onCheckedChanged = builder.onCheckedChanged;
+        this.checked=builder.checked;
     }
 
-    public MaterialPreferenceSwitchItem(CharSequence text, CharSequence subText, Drawable icon, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
+    public MaterialPreferenceSwitchItem(CharSequence text, CharSequence subText, Drawable icon, boolean checked, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
         this.text = text;
         this.subText = subText;
         this.icon = icon;
         this.onCheckedChanged = onCheckedChanged;
+        this.checked=checked;
     }
 
-    public MaterialPreferenceSwitchItem(CharSequence text, CharSequence subText, Drawable icon) {
-        this.text = text;
-        this.subText = subText;
-        this.icon = icon;
-    }
-
-    public MaterialPreferenceSwitchItem(int textRes, int subTextRes, int iconRes, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
+    public MaterialPreferenceSwitchItem(int textRes, int subTextRes, int iconRes, boolean checked, MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
         this.textRes = textRes;
         this.subTextRes = subTextRes;
         this.iconRes = iconRes;
         this.onCheckedChanged = onCheckedChanged;
-    }
-
-    public MaterialPreferenceSwitchItem(int textRes, int subTextRes, int iconRes) {
-        this.textRes = textRes;
-        this.subTextRes = subTextRes;
-        this.iconRes = iconRes;
+        this.checked=checked;
     }
 
     public static MaterialPreferenceItemViewHolder getViewHolder(View view) {
@@ -146,6 +138,8 @@ public class MaterialPreferenceSwitchItem extends MaterialPreferenceItem {
         if (Build.VERSION.SDK_INT < 21) {
             holder.view.setPadding(pL, pT, pR, pB);
         }
+
+        holder.aswitch.setChecked(item.isChecked());
     }
 
     @Override
@@ -179,6 +173,7 @@ public class MaterialPreferenceSwitchItem extends MaterialPreferenceItem {
         this.showIcon = item.showIcon;
         this.iconGravity = item.iconGravity;
         this.onCheckedChanged = item.onCheckedChanged;
+        this.checked = item.checked;
     }
 
     @Override
@@ -264,6 +259,14 @@ public class MaterialPreferenceSwitchItem extends MaterialPreferenceItem {
         return this;
     }
 
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
     public MaterialPreferenceOnCheckedChangedListener getOnCheckedChanged() {
         return onCheckedChanged;
     }
@@ -323,6 +326,7 @@ public class MaterialPreferenceSwitchItem extends MaterialPreferenceItem {
         private boolean showIcon = true;
         @IconGravity
         private int iconGravity = GRAVITY_MIDDLE;
+        private boolean checked = false;
 
         public Builder text(CharSequence text) {
             this.text = text;
@@ -383,6 +387,11 @@ public class MaterialPreferenceSwitchItem extends MaterialPreferenceItem {
 
         public Builder setOnCheckedChanged(MaterialPreferenceOnCheckedChangedListener onCheckedChanged) {
             this.onCheckedChanged = onCheckedChanged;
+            return this;
+        }
+
+        public Builder setChecked(boolean checked) {
+            this.checked = checked;
             return this;
         }
 

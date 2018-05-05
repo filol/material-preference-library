@@ -69,57 +69,15 @@ public class Demo {
                 })
                 .build());
 
-        MaterialPreferenceCard.Builder authorCardBuilder = new MaterialPreferenceCard.Builder();
-        authorCardBuilder.title("Author");
-//        authorCardBuilder.titleColor(ContextCompat.getColor(c, R.color.colorAccent));
 
-        authorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
-                .text("François Dexemple")
-                .subText("France")
-                .icon(new IconicsDrawable(c)
-                        .icon(CommunityMaterial.Icon.cmd_account)
-                        .color(ContextCompat.getColor(c, colorIcon))
-                        .sizeDp(18))
-                .build());
-
-        authorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
-                .text("Fork on GitHub")
-                .icon(new IconicsDrawable(c)
-                        .icon(CommunityMaterial.Icon.cmd_github_circle)
-                        .color(ContextCompat.getColor(c, colorIcon))
-                        .sizeDp(18))
-                .setOnClickAction(ConvenienceBuilder.createWebsiteOnClickAction(c, Uri.parse("https://github.com/filol")))
-                .build());
-
-        MaterialPreferenceCard.Builder originalAuthorCardBuilder = new MaterialPreferenceCard.Builder();
-        originalAuthorCardBuilder.title("Original author");
-//        authorCardBuilder.titleColor(ContextCompat.getColor(c, R.color.colorAccent));
-
-        originalAuthorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
-                .text("Daniel Stone")
-                .subText("United Kingdom")
-                .icon(new IconicsDrawable(c)
-                        .icon(CommunityMaterial.Icon.cmd_account)
-                        .color(ContextCompat.getColor(c, colorIcon))
-                        .sizeDp(18))
-                .build());
-
-        originalAuthorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
-                .text("Original Library on GitHub")
-                .icon(new IconicsDrawable(c)
-                        .icon(CommunityMaterial.Icon.cmd_github_circle)
-                        .color(ContextCompat.getColor(c, colorIcon))
-                        .sizeDp(18))
-                .setOnClickAction(ConvenienceBuilder.createWebsiteOnClickAction(c, Uri.parse("https://github.com/daniel-stoneuk")))
-                .build());
 
         MaterialPreferenceCard.Builder preferenceCardBuilder = new MaterialPreferenceCard.Builder();
 
         preferenceCardBuilder.title("Preferences");
 
         preferenceCardBuilder.addItem(new MaterialPreferenceSwitchItem.Builder()
-                .text("Switch2")
-                .subText("Description of the switch2")
+                .text("Switch")
+                .subText("Description of the switch")
                 .icon(new IconicsDrawable(c)
                         .icon(CommunityMaterial.Icon.cmd_access_point)
                         .color(ContextCompat.getColor(c, colorIcon))
@@ -130,11 +88,12 @@ public class Demo {
                         Toast.makeText(c,"Now : "+isChecked,Toast.LENGTH_SHORT).show();
                     }
                 })
+                .setChecked(true)
                 .build());
 
         preferenceCardBuilder.addItem(new MaterialPreferenceSwitchItem.Builder()
-                .text("Switch")
-                .subText("Description of the switch")
+                .text("Switch2")
+                .subText("Description of the switch2")
                 .icon(new IconicsDrawable(c)
                         .icon(CommunityMaterial.Icon.cmd_account)
                         .color(ContextCompat.getColor(c, colorIcon))
@@ -160,6 +119,7 @@ public class Demo {
                         Toast.makeText(c,"Now : "+isChecked,Toast.LENGTH_SHORT).show();
                     }
                 })
+                .setChecked(true)
                 .build());
 
         MaterialPreferenceCard.Builder convenienceCardBuilder = new MaterialPreferenceCard.Builder();
@@ -235,6 +195,49 @@ public class Demo {
                 .setIconGravity(MaterialPreferenceActionItem.GRAVITY_TOP)
                 .build()
         );
+        MaterialPreferenceCard.Builder authorCardBuilder = new MaterialPreferenceCard.Builder();
+        authorCardBuilder.title("Author");
+//        authorCardBuilder.titleColor(ContextCompat.getColor(c, R.color.colorAccent));
+
+        authorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
+                .text("François Dexemple")
+                .subText("France")
+                .icon(new IconicsDrawable(c)
+                        .icon(CommunityMaterial.Icon.cmd_account)
+                        .color(ContextCompat.getColor(c, colorIcon))
+                        .sizeDp(18))
+                .build());
+
+        authorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
+                .text("Fork on GitHub")
+                .icon(new IconicsDrawable(c)
+                        .icon(CommunityMaterial.Icon.cmd_github_circle)
+                        .color(ContextCompat.getColor(c, colorIcon))
+                        .sizeDp(18))
+                .setOnClickAction(ConvenienceBuilder.createWebsiteOnClickAction(c, Uri.parse("https://github.com/filol")))
+                .build());
+
+        MaterialPreferenceCard.Builder originalAuthorCardBuilder = new MaterialPreferenceCard.Builder();
+        originalAuthorCardBuilder.title("Original author");
+//        authorCardBuilder.titleColor(ContextCompat.getColor(c, R.color.colorAccent));
+
+        originalAuthorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
+                .text("Daniel Stone")
+                .subText("United Kingdom")
+                .icon(new IconicsDrawable(c)
+                        .icon(CommunityMaterial.Icon.cmd_account)
+                        .color(ContextCompat.getColor(c, colorIcon))
+                        .sizeDp(18))
+                .build());
+
+        originalAuthorCardBuilder.addItem(new MaterialPreferenceActionItem.Builder()
+                .text("Original Library on GitHub")
+                .icon(new IconicsDrawable(c)
+                        .icon(CommunityMaterial.Icon.cmd_github_circle)
+                        .color(ContextCompat.getColor(c, colorIcon))
+                        .sizeDp(18))
+                .setOnClickAction(ConvenienceBuilder.createWebsiteOnClickAction(c, Uri.parse("https://github.com/daniel-stoneuk")))
+                .build());
 
 //        MaterialPreferenceList materialPreferenceList = new MaterialPreferenceList(appCardBuilder.build(), authorCardBuilder.build(), originalAuthorCardBuilder.build(),preferenceCardBuilder.build(), convenienceCardBuilder.build(), otherCardBuilder.build());
 //        for (MaterialPreferenceCard cards: materialPreferenceList.getCards()) {
@@ -243,7 +246,7 @@ public class Demo {
 //                Log.d("DEBUG-ITEM",item.getDetailString());
 //        }
 
-        return new MaterialPreferenceList(appCardBuilder.build(), authorCardBuilder.build(), originalAuthorCardBuilder.build(),preferenceCardBuilder.build(), convenienceCardBuilder.build(), otherCardBuilder.build());
+        return new MaterialPreferenceList(appCardBuilder.build(),preferenceCardBuilder.build(), convenienceCardBuilder.build(), otherCardBuilder.build(), authorCardBuilder.build(), originalAuthorCardBuilder.build());
     }
 
     public static MaterialPreferenceList createMaterialPreferenceLicenseList(final Context c, int colorIcon) {
