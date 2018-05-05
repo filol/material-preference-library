@@ -46,7 +46,7 @@ public class ExampleMaterialPreferenceActivity extends MaterialPreferenceActivit
     protected CharSequence getActivityTitle() {
         return getString(R.string.mp_title_preference);
     }
-    
+
 }
 ```
 
@@ -86,12 +86,12 @@ public class ExampleMaterialPreferenceFragment extends MaterialPreferenceFragmen
         return new MaterialPreferenceList.Builder()
                 .build(); // This creates an empty screen, add cards with .addCard()
     }
-    
+
     @Override
     protected int getTheme() {
         return R.style.AppTheme_MaterialPreferenceActivity_Fragment;
     }
-    
+
 }
 ```
 
@@ -223,7 +223,7 @@ Check out a working example in [`Demo.java`][3].
 
 **Tip:** Use [ConvenienceBuilder][conveniencebuilderjava] to easily create items or OnClickActions.
 
-**Tip:** Customise text colour and card colour in your styles. Example below: 
+**Tip:** Customise text colour and card colour in your styles. Example below:
 
 ```xml
 <style name="AppTheme.MaterialPreferenceActivity.Light.CustomCardView" parent="Theme.mp.Light">
@@ -302,7 +302,7 @@ limitations under the License.
 [3]: https://github.com/filol/material-preference-library/blob/master/app/src/main/java/com/francoisdexemple/materialpreferencedemo/Demo.java
 [4]: http://i.imgur.com/HEm08Ax.png
 [5]: https://play.google.com/store/apps/details?id=com.danielstone.energyhive
-[6]: https://github.com/filol/material-preference-library/tree/master/materialpreference
+[6]: https://github.com/daniel-stoneuk/material-about-library
 [8]: https://github.com/filol/material-preference-library/blob/master/materialpreference/src/main/java/com/francoisdexemple/materialpreference/model/MaterialPreferenceCard.java
 [9]: https://github.com/filol/material-preference-library/blob/master/materialpreference/src/main/java/com/francoisdexemple/materialpreference/items/MaterialPreferenceTitleItem.java
 [10]: https://github.com/filol/material-preference-library/blob/master/materialpreference/src/main/java/com/francoisdexemple/materialpreference/items/MaterialPreferenceActionItem.java
