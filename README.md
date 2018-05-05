@@ -24,7 +24,23 @@ If you use this library in your app, please let me know and I'll add it to the l
 
 ## Dependency
 
-Comming soon
+_material-preference-library_ is available on [**jitpack.io**][1] and has support for different support library versions. See the full list [here](https://jitpack.io/#filol/material-preference-library).
+
+**Gradle dependency:**
+
+```gradle
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+```gradle
+dependencies {
+    implementation 'com.github.filol:material-preference-library:1.0'
+}
+```
 
 ## Setup
 
