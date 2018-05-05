@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="mp_toolbarTheme" format="reference"/>
+    <attr name="mp_toolbarPopupTheme" format="reference"/>
+
+    <attr name="mp_color_primary" format="reference|color" />
+    <attr name="mp_color_secondary" format="reference|color" />
+    <attr name="mp_card_background" format="reference|color" />
+</resources>

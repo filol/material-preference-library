@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/mp_baseline_half"
+    android:paddingBottom="@dimen/mp_baseline_half"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/mp_action_action_item_image_height"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/mp_baseline"
+        android:layout_marginLeft="@dimen/mp_baseline"
+        android:layout_marginRight="@dimen/mp_baseline"
+        android:layout_marginStart="@dimen/mp_baseline"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mp_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="?mp_color_primary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mp_action_item_subtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?mp_color_secondary"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mp_item_image"
+        android:layout_width="@dimen/mp_action_item_image_width"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/mp_baseline"
+        android:layout_marginLeft="@dimen/mp_baseline_half"
+        android:layout_marginRight="@dimen/mp_baseline"
+        android:layout_marginStart="@dimen/mp_baseline_half"
+        android:adjustViewBounds="false"
+        android:contentDescription="@null"
+        android:cropToPadding="false"
+        android:scaleType="centerInside" />
+</LinearLayout>

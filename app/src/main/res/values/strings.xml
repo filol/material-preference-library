@@ -1,0 +1,10 @@
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Material Preference Library Demo</string>
+    <string name="action_Preference">Preference</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_example_material_Preference_fragment" tools:ignore="UnusedResources">ExampleMaterialPreferenceFragment
+    </string>
+    <string name="action_settings" tools:ignore="UnusedResources">Settings</string>
+    <string name="mal_launch_Preference_activity">Launch Preference Activity</string>
+    <string name="mal_launch_Preference_fragment">Launch Preference Fragment</string>
+</resources>

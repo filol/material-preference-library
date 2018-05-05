@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/mp_baseline_half"
+    android:paddingEnd="@dimen/mp_baseline"
+    android:paddingLeft="@dimen/mp_baseline_half"
+    android:paddingRight="@dimen/mp_baseline"
+    android:paddingStart="@dimen/mp_baseline_half"
+    android:paddingTop="@dimen/mp_baseline_half">
+
+    <ImageView
+        android:id="@+id/mp_item_image"
+        android:layout_width="@dimen/mp_title_item_image_size"
+        android:layout_height="@dimen/mp_title_item_image_size"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/mp_baseline_half"
+        android:layout_marginLeft="@dimen/mp_baseline_half"
+        android:layout_marginRight="@dimen/mp_baseline_half"
+        android:layout_marginStart="@dimen/mp_baseline_half"
+        android:adjustViewBounds="false"
+        android:contentDescription="@null"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mp_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mp_baseline_half"
+            android:layout_marginStart="@dimen/mp_baseline_half"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="?mp_color_primary"
+            tools:text="App Name" />
+
+        <TextView
+            android:id="@+id/mp_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/mp_baseline_half"
+            android:layout_marginStart="@dimen/mp_baseline_half"
+            android:layout_marginTop="-4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="?mp_color_secondary"
+            tools:text="Copyright Me" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mp_list_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mp_list_card_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mp_baseline_half"
+        android:layout_marginEnd="@dimen/mp_baseline"
+        android:layout_marginLeft="@dimen/mp_baseline"
+        android:layout_marginRight="@dimen/mp_baseline"
+        android:layout_marginStart="@dimen/mp_baseline"
+        android:layout_marginTop="@dimen/mp_baseline"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="?mp_color_primary"
+        tools:text="Author" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mp_card_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/mp_baseline_half"
+        android:paddingTop="@dimen/mp_baseline_half" />
+
+    <View android:background="#616161" android:layout_width="match_parent" android:layout_height="1px"/>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/mp_baseline_half"
+    android:paddingLeft="@dimen/mp_baseline_half"
+    android:paddingStart="@dimen/mp_baseline_half"
+    android:paddingTop="@dimen/mp_baseline_half">
+
+    <ImageView
+        android:id="@+id/mp_checkbox_image"
+        android:layout_width="@dimen/mp_action_item_image_width"
+        android:layout_height="@dimen/mp_action_action_item_image_height"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/mp_baseline_half"
+        android:layout_marginStart="@dimen/mp_baseline"
+        android:layout_marginTop="@dimen/mp_baseline_half"
+        android:adjustViewBounds="false"
+        android:contentDescription="@null"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/mp_checkbox_subtext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mp_checkbox_text" />
+
+    <CheckBox
+        android:id="@+id/mp_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mp_baseline_half"
+        android:layout_marginEnd="@dimen/mp_baseline_half"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/mp_baseline_half"
+        app:layout_constraintBottom_toBottomOf="@+id/mp_checkbox_subtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/mp_checkbox_text" />
+
+    <TextView
+        android:id="@+id/mp_checkbox_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/mp_baseline_half"
+        android:layout_marginStart="@dimen/mp_action_item_image_width"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="?mp_color_primary"
+        app:layout_constraintEnd_toStartOf="@+id/mp_checkbox"
+        app:layout_constraintStart_toEndOf="@+id/mp_checkbox_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Keep screen on" />
+
+    <TextView
+        android:id="@+id/mp_checkbox_subtext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/mp_baseline_half"
+        android:layout_marginStart="@dimen/mp_action_item_image_width"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="?mp_color_secondary"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/mp_checkbox"
+        app:layout_constraintStart_toEndOf="@+id/mp_checkbox_image"
+        app:layout_constraintTop_toBottomOf="@+id/mp_checkbox_text"
+        tools:text="Disable the automatic shutdown of the screen"
+        tools:visibility="visible" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+</android.support.constraint.ConstraintLayout>

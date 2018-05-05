@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.mp.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="mp_toolbarTheme">@style/Theme.mp.Toolbar.Light</item>
+        <item name="mp_toolbarPopupTheme">@style/Theme.mp.Toolbar.Light</item>
+        <item name="mp_color_primary">@color/mp_text_primary</item>
+        <item name="mp_color_secondary">@color/mp_text_secondary</item>
+        <item name="mp_card_background">@color/cardview_light_background</item>
+    </style>
+
+    <style name="Theme.mp.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="mp_toolbarTheme">@style/Theme.mp.Toolbar.Dark</item>
+        <item name="mp_toolbarPopupTheme">@style/Theme.mp.Toolbar.Dark</item>
+        <item name="mp_color_primary">@color/mp_text_primary_dark</item>
+        <item name="mp_color_secondary">@color/mp_text_secondary_dark</item>
+        <item name="mp_card_background">@color/cardview_dark_background</item>
+    </style>
+
+    <style name="Theme.mp.Dark.LightActionBar">
+        <item name="mp_toolbarTheme">@style/Theme.mp.Toolbar.Light</item>
+    </style>
+
+    <style name="Theme.mp.Light.DarkActionBar">
+        <item name="mp_toolbarTheme">@style/Theme.mp.Toolbar.Dark</item>
+    </style>
+
+
+
+    <style name="Theme.mp.Toolbar.Light" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.mp.Toolbar.Dark" parent="ThemeOverlay.AppCompat.Dark" />
+
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mp_list_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/mp_baseline_half"
+    android:layout_marginLeft="@dimen/mp_baseline_half"
+    android:layout_marginRight="@dimen/mp_baseline_half"
+    android:layout_marginStart="@dimen/mp_baseline_half"
+    android:layout_marginTop="@dimen/mp_baseline_half"
+    android:paddingBottom="@dimen/mp_baseline"
+    android:paddingEnd="@dimen/mp_baseline_half"
+    android:paddingLeft="@dimen/mp_baseline_half"
+    android:paddingRight="@dimen/mp_baseline_half"
+    android:paddingStart="@dimen/mp_baseline_half"
+    android:paddingTop="@dimen/mp_baseline"
+    app:cardBackgroundColor="?mp_card_background"
+    app:cardCornerRadius="@dimen/mp_card_radius"
+    app:cardElevation="@dimen/mp_card_elevation"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mp_list_card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mp_baseline_half"
+            android:layout_marginEnd="@dimen/mp_baseline"
+            android:layout_marginLeft="@dimen/mp_baseline"
+            android:layout_marginRight="@dimen/mp_baseline"
+            android:layout_marginStart="@dimen/mp_baseline"
+            android:layout_marginTop="@dimen/mp_baseline"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="?mp_color_primary"
+            tools:text="Author"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mp_card_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/mp_baseline_half"
+            android:paddingTop="@dimen/mp_baseline_half"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
