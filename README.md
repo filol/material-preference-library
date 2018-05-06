@@ -1,4 +1,4 @@
-# material-preference-library
+# material-preference-library : DEPRECATED PLEASE LOOK HERE FOR THE SAME THING [material-about-library from daniel-stoneuk][6]
 
 Makes it easy to create a beautiful preference screen for your app. Generates an `Activity` or `Fragment`.
 
